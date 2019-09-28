@@ -12,8 +12,8 @@ if (!$_SESSION['logged_in']) {
 //TODO: Validate if this data is correct
 
 
-require_once(__DIR__.'/services/Database.php');
-require(__DIR__.'/classes/Car.php');
+require_once(__DIR__ . '/services/Database.php');
+require(__DIR__ . '/classes/Car.php');
 
 $db = new Database;
 

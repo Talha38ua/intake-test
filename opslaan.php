@@ -13,7 +13,7 @@ $lastname = mysqli_real_escape_string($mysqliLink, $_POST['last_name']);
 $age = mysqli_real_escape_string($mysqliLink, $_POST['leeftijd']);
 $brand = mysqli_real_escape_string($mysqliLink, $_POST['brand']);
 $type = mysqli_real_escape_string($mysqliLink, $_POST['type']);
-$task = mysqli_real_escape_string($mysqliLink,$_POST['task']);
+$task = mysqli_real_escape_string($mysqliLink, $_POST['task']);
 
 // TODO: Splits deze file op naar meerdere losse scripts. Eentje voor customer, eentje voor auto, eentje voor klussen.
 

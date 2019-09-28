@@ -23,7 +23,8 @@
                 </td>
             </tr>
         </table>
-    </form><br>
+    </form>
+    <br>
     <?php
 
     if (isset($_GET['login_failed'])) {
