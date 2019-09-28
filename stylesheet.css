@@ -1,0 +1,99 @@
+.vertical-center {
+    min-height: 80%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 80vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+    background-color: #DCDCDC;
+    height: 100%;
+}
+
+
+.vertical-center form {
+    background-color: #A2D722;
+    border-radius: 20px;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    overflow: auto;
+    position: absolute;
+}
+
+.vertical-center h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+.vertical-center input[name=login] {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+}
+
+.vertical-center input[name=password] {
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+}
+
+.vertical-center input[type=submit] {
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    width: 90px;
+}
+
+.errormessage {
+    margin: 10px;
+    position: relative;
+    top: 65px;
+    left: 65px;
+}
+
+.container {
+    background-color: #DCDCDC;
+    height: 100%;
+}
+
+.nav {
+    background-color: #DCDCDC;
+    border-radius: 10px;
+}
+
+.klant_nieuw {
+    background-color: #A2D722;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    margin:auto;
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+}
+.nieuw {
+    background: #DCDCDC;
+    width: 100%;
+    height: 100%;
+}
+
+.klant_nieuw input {
+    border-radius: 5px;
+    margin: 5px;
+}
+.auto_table input {
+    background-color: #F5F5F5;
+    width: 250px;
+}
+
+.persoon_table input {
+    background-color: #F5F5F5;
+    width: 250px;
+}
+
+select[name=car] {
+    border-radius: 10px;
+}
+

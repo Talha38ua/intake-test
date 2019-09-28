@@ -3,7 +3,8 @@
     "description": "UNIT4 Verzuimsignaal Intake Project",
     "type": "project",
     "require": {
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+      "ext-mysqli": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "7"

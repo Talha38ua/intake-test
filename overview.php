@@ -31,7 +31,6 @@ $jobs = $db->getAllRows('SELECT task.*, customer.*, car.*
                                 JOIN car on task.car_id = car.id
                                 JOIN customer on car.customer_id = customer.id');
 
-
 ?>
 
 
@@ -42,6 +41,8 @@ $jobs = $db->getAllRows('SELECT task.*, customer.*, car.*
 
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+
 
 </header>
 <body>

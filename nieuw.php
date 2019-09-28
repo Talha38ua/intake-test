@@ -1,3 +1,7 @@
+<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+
 <?php
 $type = $_GET['type'];
 
@@ -8,16 +12,15 @@ $type = $_GET['type'];
 
 // TODO: Maak het mogelijk om autos, klanten en klussen te verwijderen
 
-
 ?>
-<form action="opslaan.php" method="POST">
+<div class="nieuw">
+<form class="klant_nieuw" action="opslaan.php" method="POST">
     <?php
     switch ($type){
     case 'klant':
         ?>
-
         <h3>Persoon</h3>
-        <table>
+        <table class="persoon_table">
             <tr>
                 <td>Voornaam:</td>
                 <td><input name="first_name"></td>
@@ -31,8 +34,9 @@ $type = $_GET['type'];
                 <td><input name="leeftijd"></td>
             </tr>
         </table>
+
         <h3> Auto</h3>
-        <table>
+        <table class="auto_table">
             <tr>
                 <td>Merk:</td>
                 <td><input name="brand"></td>
@@ -42,7 +46,6 @@ $type = $_GET['type'];
                 <td><input name="type"></td>
             </tr>
         </table>
-
         <?php break;
     case 'task':
     require(__DIR__.'/services/Database.php');
@@ -75,3 +78,4 @@ $type = $_GET['type'];
         <input type="hidden" name="save_type" value="<?= $_GET['type'] ?>">
         <input type="submit" value="Invoeren"/>
     </form>
+</div>

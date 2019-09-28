@@ -1,15 +1,6 @@
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
-
-<style>
-    .vertical-center {
-        min-height: 80%; /* Fallback for browsers do NOT support vh unit */
-        min-height: 80vh; /* These two lines are counted as one :-)       */
-
-        display: flex;
-        align-items: center;
-    }
-</style>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
 
 <div class="container d-flex justify-content-center vertical-center">
     <form action="authenticate.php" method="POST">
@@ -38,7 +29,7 @@
     if (isset($_GET['login_failed'])) {
         ?>
 
-        <div style="color:red;">Kon niet inloggen: Login of wachtwoord incorrect</div>
+        <div class="errormessage" style="color:red;">Kon niet inloggen: Login of wachtwoord incorrect</div>
         <?php
     }
 
