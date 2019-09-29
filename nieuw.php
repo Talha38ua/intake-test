@@ -29,15 +29,15 @@ $type = $_GET['type'];
             <table class="persoon_table">
                 <tr>
                     <td>Voornaam:</td>
-                    <td><input name="first_name"></td>
+                    <td><input name="first_name" type="text"  pattern="[a-zA-Z]+"></td>
                 </tr>
                 <tr>
                     <td>Achternaam:</td>
-                    <td><input name="last_name"></td>
+                    <td><input name="last_name" type="text" pattern="[a-zA-Z]+"></td>
                 </tr>
                 <tr>
                     <td>Leeftijd:</td>
-                    <td><input name="leeftijd"></td>
+                    <td><input name="leeftijd" type="number"></td>
                 </tr>
             </table>
 
@@ -45,11 +45,11 @@ $type = $_GET['type'];
             <table class="auto_table">
                 <tr>
                     <td>Merk:</td>
-                    <td><input name="brand"></td>
+                    <td><input name="brand" type="text" pattern="[a-zA-Z]+"></td>
                 </tr>
                 <tr>
                     <td>Type:</td>
-                    <td><input name="type"></td>
+                    <td><input name="type" type="text" pattern="[a-zA-Z]+"></td>
                 </tr>
             </table>
 
@@ -76,7 +76,7 @@ $type = $_GET['type'];
             <table>
                 <tr>
                     <td>Klus:</td>
-                    <td><input name="task"></td>
+                    <td><input name="task" type="text" pattern="[a-zA-Z]+"></td>
                 </tr>
             </table>
             <?php
