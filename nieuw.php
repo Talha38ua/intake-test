@@ -16,6 +16,8 @@ $type = $_GET['type'];
 
 // TODO: Maak het mogelijk om autos, klanten en klussen te verwijderen
 
+//Validation on input is gedaan door elke input een type te geven en text type inputten een pattern te geven.
+
 ?>
 <body>
 <div class="nieuw">
@@ -25,15 +27,15 @@ $type = $_GET['type'];
         case 'klant':
             ?>
 
-            <h3>Persoon</h3>
-            <table class="persoon_table">
+            <h3 align="center">Persoon</h3>
+            <table class="persoon_table" align="center">
                 <tr>
                     <td>Voornaam:</td>
-                    <td><input name="first_name" type="text"  pattern="[a-zA-Z]+"></td>
+                    <td><input name="first_name" type="text"  pattern="[a-zA-Z\s]+"></td>
                 </tr>
                 <tr>
                     <td>Achternaam:</td>
-                    <td><input name="last_name" type="text" pattern="[a-zA-Z]+"></td>
+                    <td><input name="last_name" type="text" pattern="[a-zA-Z\s]+"></td>
                 </tr>
                 <tr>
                     <td>Leeftijd:</td>
@@ -41,15 +43,15 @@ $type = $_GET['type'];
                 </tr>
             </table>
 
-            <h3> Auto</h3>
-            <table class="auto_table">
+            <h3 align="center"> Auto</h3>
+            <table class="auto_table" align="center">
                 <tr>
                     <td>Merk:</td>
-                    <td><input name="brand" type="text" pattern="[a-zA-Z]+"></td>
+                    <td><input name="brand" type="text" pattern="[a-zA-Z\s]+"></td>
                 </tr>
                 <tr>
                     <td>Type:</td>
-                    <td><input name="type" type="text" pattern="[a-zA-Z]+"></td>
+                    <td><input name="type"></td>
                 </tr>
             </table>
 
@@ -63,7 +65,7 @@ $type = $_GET['type'];
         ?>
         <form action="opslaan.php">
 
-            <h3> Auto</h3>
+            <h3 align="center"> Auto</h3>
             <select name="car">
                 <?php foreach ($cars
 
@@ -76,7 +78,7 @@ $type = $_GET['type'];
             <table>
                 <tr>
                     <td>Klus:</td>
-                    <td><input name="task" type="text" pattern="[a-zA-Z]+"></td>
+                    <td><input name="task" type="text" pattern="[a-zA-Z\s]+"></td>
                 </tr>
             </table>
             <?php

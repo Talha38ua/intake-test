@@ -93,6 +93,7 @@
 .auto_table input {
     background-color: #F5F5F5;
     width: 250px;
+    margin-left: 50px;
 }
 
 .persoon_table input {
@@ -102,6 +103,7 @@
 
 select[name=car] {
     border-radius: 10px;
+    margin: 10px;
 }
 
 body {
@@ -109,3 +111,7 @@ body {
     max-width: 100%;
 }
 
+input[value=Invoeren] {
+    float: right;
+    margin: 15px 10px 10px 10px;
+}
