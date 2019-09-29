@@ -1,5 +1,9 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link type="text/css" rel="stylesheet" href="stylesheet.css">
 
 <?php
@@ -13,12 +17,14 @@ $type = $_GET['type'];
 // TODO: Maak het mogelijk om autos, klanten en klussen te verwijderen
 
 ?>
+<body>
 <div class="nieuw">
-    <form class="klant_nieuw" action="opslaan.php" method="">
+    <form class="klant_nieuw" action="opslaan.php" method="POST">
         <?php
         switch ($type){
         case 'klant':
             ?>
+
             <h3>Persoon</h3>
             <table class="persoon_table">
                 <tr>
@@ -46,6 +52,7 @@ $type = $_GET['type'];
                     <td><input name="type"></td>
                 </tr>
             </table>
+
             <?php break;
         case 'task':
         require(__DIR__ . '/services/Database.php');
@@ -79,3 +86,4 @@ $type = $_GET['type'];
             <input type="submit" value="Invoeren"/>
         </form>
 </div>
+</body>

@@ -1,7 +1,15 @@
-<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
-<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<head>
+    <title>login</title>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
 <div class="container d-flex justify-content-center vertical-center">
     <form action="authenticate.php" method="POST">
         <h3>Login</h3>
@@ -36,5 +44,5 @@
 
     ?>
 </div>
-
+</body>
 

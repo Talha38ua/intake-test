@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
-
-include_once(__DIR__.'/../services/Database.php');
-
+include_once(__DIR__ . '/../services/Database.php');
 
 /**
  * Class Car
@@ -13,25 +11,21 @@ class Car
      * @var Database
      */
     private $db;
-
     /**
      * Id of the car.
      * @var int
      */
     private $id;
-
     /**
      * Id of the owner of the car
      * @var int
      */
     private $customer_id;
-
     /**
      * Brand of the car
      * @var string
      */
     private $brand;
-
     /**
      * Specific type/model/designation of the car
      * @var string
@@ -118,7 +112,6 @@ class Car
     public function __construct($id = null)
     {
         $this->db = new Database;
-
         if (!empty($id)) {
             $this->loadCar($id);
         }
@@ -131,16 +124,13 @@ class Car
     public function loadCar($id): void
     {
         $car = $this->db->getAllRows(sprintf('SELECT * FROM car WHERE id = %d', $id));
-
         if (count($car) == 1) {
             $this->setId($car[0]['id']);
             $this->setCustomerId($car[0]['customer_id']);
             $this->setBrand($car[0]['brand']);
             $this->setType($car[0]['type']);
         }
-
     }
-
     //TODO: Return an instance of classes/Customer instead of array/null
 
     /**
@@ -160,9 +150,8 @@ class Car
      * Returns the number of tasks associated with this car
      * @return int
      */
-    public function getNumberOfTasksOfCar() : int
+    public function getNumberOfTasksOfCar(): int
     {
         return count($this->db->getAllRows(sprintf('SELECT * FROM task WHERE car_id = %d', $this->getId())));
     }
-
 }

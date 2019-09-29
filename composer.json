@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "ext-pdo": "*",
-      "ext-mysqli": "*"
+        "ext-mysqli": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "7"

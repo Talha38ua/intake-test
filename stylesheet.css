@@ -65,7 +65,7 @@
 
 .klant_nieuw {
     background-color: #A2D722;
-    width: 400px;
+    width: 500px;
     border-radius: 10px;
     padding: 10px;
     margin: auto;
@@ -76,8 +76,13 @@
 
 .nieuw {
     background: #DCDCDC;
-    width: 100%;
     height: 100%;
+    width: 70%;
+    margin: auto;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 .klant_nieuw input {
@@ -97,5 +102,10 @@
 
 select[name=car] {
     border-radius: 10px;
+}
+
+body {
+    background-color: #A2D722;
+    max-width: 100%;
 }
 

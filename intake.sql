@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `car` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `brand` varchar(30) NOT NULL,
-  `type` varchar(30) NOT NULL
+                       `id` int(10) UNSIGNED NOT NULL,
+                       `customer_id` int(11) NOT NULL,
+                       `brand` varchar(30) NOT NULL,
+                       `type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -55,10 +55,10 @@ INSERT INTO `car` (`id`, `customer_id`, `brand`, `type`) VALUES
 --
 
 CREATE TABLE `customer` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `age` int(11) NOT NULL
+                            `id` int(10) UNSIGNED NOT NULL,
+                            `first_name` varchar(30) NOT NULL,
+                            `last_name` varchar(30) NOT NULL,
+                            `age` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -78,10 +78,10 @@ INSERT INTO `customer` (`id`, `first_name`, `last_name`, `age`) VALUES
 --
 
 CREATE TABLE `task` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `car_id` int(11) NOT NULL,
-  `task` varchar(255) NOT NULL,
-  `status` int(10) UNSIGNED NOT NULL
+                        `id` int(10) UNSIGNED NOT NULL,
+                        `car_id` int(11) NOT NULL,
+                        `task` varchar(255) NOT NULL,
+                        `status` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -105,10 +105,10 @@ INSERT INTO `task` (`id`, `car_id`, `task`, `status`) VALUES
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `login` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  `last_login` datetime DEFAULT NULL
+                        `id` int(11) NOT NULL,
+                        `login` varchar(45) NOT NULL,
+                        `password` varchar(45) NOT NULL,
+                        `last_login` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -126,25 +126,25 @@ INSERT INTO `user` (`id`, `login`, `password`, `last_login`) VALUES
 -- Indexes for table `car`
 --
 ALTER TABLE `car`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `task`
 --
 ALTER TABLE `task`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -154,25 +154,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+    MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+    MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
