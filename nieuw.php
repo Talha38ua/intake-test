@@ -7,8 +7,13 @@
 <link type="text/css" rel="stylesheet" href="stylesheet.css">
 
 <?php
+//This checks if the user is not logged in. If the user is not logged in the user will get sent back to the login page.
+session_start();
+if (!$_SESSION['logged_in']) {
+    header("Location: login.php");
+    exit();
+}
 $type = $_GET['type'];
-
 
 // TODO: Splits deze file op naar meerdere losse scripts. Eentje voor customer, eentje voor auto, eentje voor klussen.
 
@@ -16,7 +21,9 @@ $type = $_GET['type'];
 
 // TODO: Maak het mogelijk om autos, klanten en klussen te verwijderen
 
-//Validation on input is gedaan door elke input een type te geven en text type inputten een pattern te geven.
+//Validation on input is done by giving almost every input a type and giving text type inputs a pattern.
+//The pattern lets the user only type letters and a space inbetween the letters for surnames with multiple words.
+//If the input doesn't match the type or pattern you will see a red bar as a sign of wrong input.
 
 ?>
 <body>
@@ -31,7 +38,7 @@ $type = $_GET['type'];
             <table class="persoon_table" align="center">
                 <tr>
                     <td>Voornaam:</td>
-                    <td><input name="first_name" type="text"  pattern="[a-zA-Z\s]+"></td>
+                    <td><input name="first_name" type="text" pattern="[a-zA-Z\s]+"></td>
                 </tr>
                 <tr>
                     <td>Achternaam:</td>

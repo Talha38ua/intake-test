@@ -3,6 +3,7 @@
 
 /**
  * Class Task
+ * Niet echt aan toe gekomen om het af te krijgen en Issue 5 begreep ik ook niet heel goed.
  */
 class Task
 {

@@ -3,6 +3,8 @@
 session_start();
 if (!$_SESSION['logged_in']) {
     header("Location: login.php");
+    // The code above was already here I only added "exit()" so it would exit to login when not logged in.
+    exit();
 }
 
 //TODO: Format according to PSR-2
